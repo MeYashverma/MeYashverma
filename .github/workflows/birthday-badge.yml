@@ -1,0 +1,59 @@
+name: Generate Birthday Badge
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # runs daily at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate birthday SVG badge
+        run: |
+          python3 - <<'PY'
+          from datetime import date, datetime
+          birth = date(2005,1,8)
+          today = date.today()
+          # compute age (years completed)
+          age = today.year - birth.year - ((today.month, today.day) < (birth.month, birth.day))
+          # compute next birthday
+          next_year = today.year if (today.month, today.day) < (birth.month, birth.day) else today.year + 1
+          next_bday = date(next_year, birth.month, birth.day)
+          days_left = (next_bday - today).days
+          # SVG content (simple badge-like)
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="360" height="80" viewBox="0 0 360 80">
+  <style>
+    .b{{ font: 700 16px "Segoe UI", Roboto, "Helvetica Neue", Arial; fill:#fff; }}
+    .s{{ font: 600 14px "Segoe UI", Roboto, "Helvetica Neue", Arial; fill:#fff; opacity:0.9; }}
+    .bg{{ fill:#2b2f3a; }}
+    .pill{{ fill:#1f6feb; }}
+  </style>
+  <rect class="bg" rx="8" width="360" height="80"/>
+  <rect x="250" y="10" width="100" height="60" rx="8" class="pill"/>
+  <text x="20" y="30" class="b">Yash Verma — Age: {age}</text>
+  <text x="20" y="55" class="s">Born: 08 Jan 2005 • Next: {next_bday.isoformat()}</text>
+  <text x="300" y="45" class="b">{days_left}d</text>
+  <text x="300" y="62" class="s">to next bday</text>
+</svg>'''
+          open('assets/birthday-badge.svg','w').write(svg)
+          print('Wrote assets/birthday-badge.svg')
+          PY
+
+      - name: Commit and push badge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/birthday-badge.svg
+          if git diff --quiet --staged; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update birthday badge"
+            git push
+          fi
