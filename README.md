@@ -1,5 +1,10 @@
 # Hi there 👋 I'm Yash Verma (MeYashverma)
 
+![Local Time](https://badge.mediaplus.ma/time/Yash?color=red)
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=25&color=F75C7E&lines=Yash+Verma;Python+Developer;Cloud+Engineer;BITS+Pilani+Student;HCLTech)](https://git.io/typing-svg)
+
+
 > Software enthusiast • Python & Web dev • Cloud & Windows admin  
 > Currently working at **HCLTech** • Studying at **BITS Pilani**
 
@@ -9,6 +14,10 @@
 
 ## 🎧 Currently listening
 [![Now Playing](https://lastfm-recently-played.vercel.app/api?user=The_Berlin)](https://www.last.fm/user/The_Berlin)
+
+---
+
+![Top Artists](https://lastfm-last-played.vercel.app/top/artists?user=The_Berlin)
 
 ---
 
@@ -27,13 +36,19 @@
 ![Contributions graph](https://ghchart.rshah.org/MeYashverma)
 
 ---
+### 🎯 2025 Goals
+- Master Google Cloud Professional Architect
+- Build 3 open-source tools
+- Automate full Windows deployment workflow
+- Publish a Python package on PyPI
+
+--- 
 
 ## 🧰 Tech / Toolbox
-<!-- Simple shields for core skills -->
-[![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=ffffff)](https://www.python.org/)
-[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=ffffff)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-4285F4?logo=googlecloud&logoColor=ffffff)](https://cloud.google.com/)
-[![Windows](https://img.shields.io/badge/-Windows-00A4EF?logo=windows&logoColor=ffffff)](https://www.microsoft.com/windows)
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,html,gcp,windows,git,vscode,github" />
+</p>
 
 ---
 
@@ -43,6 +58,25 @@
 
 ---
 
+![Metrics](https://metrics.lecoq.io/MeYashverma?template=classic&languages=1&isocalendar=1&followup=1&people=1)
+
+---
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=MeYashverma&theme=dracula&margin-w=5)
+
+---
+
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal)
+
+---
+
+
 ## 📫 Contact
 [![Instagram](https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=ffffff)](https://instagram.com/me_yashverma)
 [![Email](https://img.shields.io/badge/-Email-c14438?logo=gmail&logoColor=ffffff)](mailto:1yash2verma3@gmail.com)
+
+---
+
+![Visitor Map](https://visitormap.vercel.app/api/map?username=MeYashverma)
+
+---
+
