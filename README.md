@@ -43,10 +43,6 @@
 
 ---
 
-![Birthday badge](https://raw.githubusercontent.com/MeYashverma/MeYashverma/main/assets/birthday-badge.svg)
-
----
-
 ## 📫 Contact
 [![Instagram](https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=ffffff)](https://instagram.com/me_yashverma)
 [![Email](https://img.shields.io/badge/-Email-c14438?logo=gmail&logoColor=ffffff)](mailto:1yash2verma3@gmail.com)
