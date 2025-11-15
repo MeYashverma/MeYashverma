@@ -51,6 +51,8 @@
 - Automate full Windows deployment workflow  
 - Publish a Python package on PyPI  
 
+[![Rickroll](https://img.shields.io/badge/Click-Me-red?style=for-the-badge)](https://youtu.be/dQw4w9WgXcQ)
+
 ---
 
 ## 🧰 Tech / Toolbox
