@@ -23,8 +23,8 @@
 <!-- Streak / Contribution -->
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MeYashverma&theme=dark&hide_border=true)
 
-<!-- Activity Graph -->
-![Activity Graph](https://activity-graph.herokuapp.com/graph?username=MeYashverma&range=all&theme=react-dark)
+<!-- Activity Graph (ghchart, reliable SVG) -->
+![Contributions graph](https://ghchart.rshah.org/MeYashverma)
 
 ---
 
