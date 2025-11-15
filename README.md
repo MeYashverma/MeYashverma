@@ -1,14 +1,8 @@
 # Hi there 👋 I'm Yash Verma (MeYashverma)
 
-![Eyes](https://readme-components.vercel.app/api/eyes)
-
 ![Adventure Avatar](https://api.dicebear.com/7.x/adventurer/svg?seed=)
 
-![Avatar](https://api.waifu.pics/sfw/waifu)
-
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=25&color=F75C7E&lines=Yash+Verma;Python+Developer;Cloud+Engineer;BITS+Pilani+Student;HCLTech)](https://git.io/typing-svg)
-
-![Slot Machine](https://readme-components.vercel.app/api/slot-machine)
 
 > Software enthusiast • Python & Web Dev • Cloud & Windows Admin  
 > Currently working at **HCLTech** • Studying at **BITS Pilani**
@@ -88,18 +82,8 @@
 
 ---
 
-### 👾 Random Octocat
-![Octocat](https://random-octocat.herokuapp.com/octocat.png)
-
----
-
 ### 🎨 Pixel Art
 ![Pixel Art](https://api.dicebear.com/7.x/pixel-art/svg?seed=Meyash)
-
----
-
-### 🚀 NASA Astronomy Picture of the Day
-![NASA APOD](https://nasa-apod.vercel.app/api)
 
 ---
 
