@@ -1,0 +1,80 @@
+name: Generate Birthday Badge
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # runs daily at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Generate birthday SVG badge
+        run: |
+          mkdir -p assets
+          python3 - <<'PY'
+          from datetime import date
+          # ======= EDIT THESE =======
+          owner = "MeYashverma"          # your GitHub username
+          fullname = "Yash Verma"        # how you want the badge to show your name
+          birth = date(2005, 1, 8)       # birth date (YYYY, M, D)
+          # ===========================
+          today = date.today()
+          # compute age (years completed)
+          age = today.year - birth.year - ((today.month, today.day) < (birth.month, birth.day))
+          # compute next birthday
+          next_year = today.year if (today.month, today.day) < (birth.month, birth.day) else today.year + 1
+          next_bday = date(next_year, birth.month, birth.day)
+          days_left = (next_bday - today).days
+          # build a simple "radical themed" SVG (matchable to your stats theme)
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="520" height="96" viewBox="0 0 520 96">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff5f6d"/>
+      <stop offset="100%" stop-color="#ffc371"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .bg{{ fill:#0b1020; }}
+    .card{{ rx:12; fill:#111827; filter:drop-shadow(0 6px 12px rgba(0,0,0,0.35)); }}
+    .title{{ font: 700 18px "Segoe UI", Roboto, Arial; fill: #ffffff; }}
+    .meta{{ font: 600 13px "Segoe UI", Roboto, Arial; fill: #e6edf3; opacity:0.9; }}
+    .pill{{ font: 700 18px "Segoe UI", Roboto, Arial; fill:#0b1020; }}
+    .small{{ font: 600 12px "Segoe UI", Roboto, Arial; fill:#dfe7f3; opacity:0.9; }}
+  </style>
+  <rect width="520" height="96" rx="12" class="bg"/>
+  <rect x="12" y="12" width="496" height="72" class="card"/>
+  <text x="28" y="38" class="title">{fullname} — Age: {age}</text>
+  <text x="28" y="60" class="meta">Born: {birth.strftime('%d %b %Y')} • Next: {next_bday.isoformat()}</text>
+  <rect x="400" y="24" width="92" height="48" rx="10" fill="url(#g)"/>
+  <text x="446" y="55" text-anchor="middle" class="pill">{days_left}d</text>
+  <text x="446" y="72" text-anchor="middle" class="small">to next bday</text>
+</svg>'''
+          path = 'assets/birthday-badge.svg'
+          with open(path, 'w', encoding='utf-8') as f:
+              f.write(svg)
+          print(f'Wrote {path} (age={age}, days_left={days_left}, next_bday={next_bday.isoformat()})')
+          PY
+
+      - name: Commit and push badge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/birthday-badge.svg
+          if git diff --quiet --staged; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update birthday badge"
+            git push
+          fi
