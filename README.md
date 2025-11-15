@@ -43,10 +43,7 @@
 
 ---
 
-## 🎂 Birthday & Age
-![Age Badge](https://img.shields.io/badge/Age-20%20%28turning%2021%20on%20Jan%208%2C%202026%20-%2054%20days%29-blue)
-
-> Born on **8 Jan 2005** — Next birthday: **2026-01-08** (in **54 days**)
+![Birthday badge](https://raw.githubusercontent.com/MeYashverma/MeYashverma/main/assets/birthday-badge.svg)
 
 ---
 
