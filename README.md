@@ -11,7 +11,7 @@
 
 ---
 
-## 🎧 Currently Listening
+## 🎧 Currently Listening to
 [![Now Playing](https://lastfm-recently-played.vercel.app/api?user=The_Berlin)](https://www.last.fm/user/The_Berlin)
 
 ---
