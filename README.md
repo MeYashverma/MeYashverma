@@ -67,9 +67,6 @@
 
 ## ⚡ Cool & Fun Widgets
 
-### 🎭 Random Avatar
-![Avatar](https://api.dicebear.com/7.x/bottts/svg?seed=MeYashverma&size=180)
-
 ---
 
 ### 😂 Developer Joke of the Day
@@ -79,16 +76,6 @@
 
 ### 🌤 Current Weather (Delhi)
 ![Weather](https://wttr.in/Delhi.png?m)
-
----
-
-### 🎨 Pixel Art
-![Pixel Art](https://api.dicebear.com/7.x/pixel-art/svg?seed=Meyash)
-
----
-
-### 🎮 Programming Meme
-![Meme](https://meme-api.com/gimme/programmingmemes)
 
 ---
 
